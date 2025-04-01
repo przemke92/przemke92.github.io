@@ -15,7 +15,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding-top: 100px; /* Zwiększamy odstęp */
+            padding-top: 100px;
         }
         .content {
             text-align: center;
@@ -31,7 +31,7 @@
             width: 150px;
             height: 150px;
             transition: transform 0.3s ease-in-out;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Czerwona poświata */
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
         .skill {
             background-color: gray;
@@ -70,6 +70,10 @@
             display: inline-block;
             margin: 20px;
             text-align: center;
+            background-color: #333; /* Szare tło */
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px; /* Stała szerokość prostokąta */
         }
         .story-item h3 {
             font-size: 1.5rem;
@@ -187,6 +191,48 @@
             box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
             z-index: -1;
         }
+        .timeline {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, white, red);
+            transform: translateY(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            z-index: 1;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .timeline-item:nth-child(1)::before,
+        .timeline-item:nth-child(3)::before {
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .timeline-item:nth-child(2)::before,
+        .timeline-item:nth-child(4)::before {
+            left: 100%;
+            transform: translate(-100%, -50%);
+        }
     </style>
 </head>
 <body class="text-white">
@@ -219,22 +265,32 @@
             <span class="px-4 py-2 rounded-lg skill">Communication Skills</span>
         </div>
         <div class="story-section">
-            <h2 class="story-title">My Story</h2>
-            <div class="story-item">
-                <h3>Integration Analyst at<br>Bunge</h3>
-                <p>January 2023 - Present</p>
-            </div>
-            <div class="story-item">
-                <h3>Data Operations Analyst at<br>Franklin Templeton</h3>
-                <p>April 2017 - December 2022</p>
-            </div>
-            <div class="story-item">
-                <h3>Tutor at<br>Tutlo</h3>
-                <p>March 2020 - December 2022</p>
-            </div>
-            <div class="story-item">
-                <h3>Collateral Analyst at<br>Franklin Templeton</h3>
-                <p>January 2016 - April 2017</p>
+            <h2 class="story-title">My Story in Tech</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="story-item">
+                        <h3>Senior Analyst at<br>Bunge</h3>
+                        <p>July 2024 - Present</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="story-item">
+                        <h3>Analyst Trainee at<br>Bunge</h3>
+                        <p>July 2023 - June 2024</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="story-item">
+                        <h3>PHP Web Developer at<br>SparxIT Solutions</h3>
+                        <p>Jan 2023 - May 2023</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="story-item">
+                        <h3>Product Engineering Intern at<br>Gojek Tech</h3>
+                        <p>May 2022 - December 2022</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="quote-section">
