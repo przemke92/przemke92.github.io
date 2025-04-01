@@ -15,7 +15,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding-top: 50px; /* Dodajemy przestrzeń na sticky header */
+            padding-top: 70px; /* Dodajemy przestrzeń na sticky header */
         }
         .content {
             text-align: center;
@@ -131,7 +131,7 @@
             width: 100%;
             background-color: black;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 20px; /* Zwiększenie przestrzeni w pionie */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -144,20 +144,51 @@
             text-decoration: none;
             font-size: 1.2rem;
             font-weight: 700;
+            position: relative;
         }
 
-        .header a:hover {
-            color: red;
-            text-decoration: underline;
-        }
-
+        /* Stylizacja ikonki domku */
         .header .home-icon {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             background-image: url('https://img.icons8.com/ios-filled/50/ffffff/home.png');
             background-size: cover;
             background-position: center;
             margin-right: 10px;
+        }
+
+        /* Podkreślenie napisu CONNECT */
+        .header a:hover {
+            color: red;
+        }
+
+        .header a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: red;
+            transition: width 0.3s, left 0.3s;
+            transform: translateX(-50%);
+        }
+
+        .header a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        /* Czerwone podświetlenie dolnej krawędzi headera */
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: red;
+            z-index: -1;
         }
     </style>
 </head>
