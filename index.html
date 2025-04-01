@@ -73,11 +73,17 @@
             background-color: #333;
             padding: 20px;
             border-radius: 10px;
-            width: 250px;
+            width: 300px; /* Zwiększona szerokość */
+            height: 150px; /* Zwiększona wysokość */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* Dodana poświata */
         }
         .story-item h3 {
             font-size: 1.5rem;
             margin-bottom: 5px;
+            line-height: 1.2; /* Zmniejszenie odstępu między liniami */
         }
         .story-item p {
             font-size: 1rem;
@@ -243,19 +249,23 @@
             <h2 class="story-title">My Story</h2>
             <div class="timeline">
                 <div class="story-item">
-                    <h3>Integration Analyst at<br>Bunge</h3>
+                    <h3>Integration Analyst at</h3>
+                    <h3>Bunge</h3>
                     <p>January 2023 - Present</p>
                 </div>
                 <div class="story-item">
-                    <h3>Data Operations Analyst at<br>Franklin Templeton</h3>
+                    <h3>Data Operations Analyst at</h3>
+                    <h3>Franklin Templeton</h3>
                     <p>April 2017 - December 2022</p>
                 </div>
                 <div class="story-item">
-                    <h3>Tutor at<br>Tutlo</h3>
+                    <h3>Tutor at</h3>
+                    <h3>Tutlo</h3>
                     <p>March 2020 - December 2022</p>
                 </div>
                 <div class="story-item">
-                    <h3>Collateral Analyst at<br>Franklin Templeton</h3>
+                    <h3>Collateral Analyst at</h3>
+                    <h3>Franklin Templeton</h3>
                     <p>January 2016 - April 2017</p>
                 </div>
             </div>
