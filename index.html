@@ -78,6 +78,32 @@
             font-size: 1rem;
             color: gray;
         }
+        .quote-section {
+            background-color: #333;
+            padding: 40px 20px;
+            margin-top: 40px;
+            text-align: center;
+            box-shadow: 0 0 10px red;
+        }
+        .quote-text {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .copyright {
+            font-size: 1rem;
+            color: gray;
+        }
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="text-white">
@@ -121,6 +147,12 @@
                 <p>January 2016 - April 2017</p>
             </div>
         </div>
+        <div class="quote-section">
+            <p class="quote-text">It's not just gathering requirements, it's engineering business success through strategic IT alignment.</p>
+            <p class="copyright">&copy; 2025 | Przemysław Iskra</p>
+        </div>
+        <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+            &#8593; </div>
     </div>
 </body>
 </html>
