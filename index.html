@@ -10,14 +10,17 @@
         body {
             background-color: black;
             font-family: 'Montserrat', sans-serif;
-            display: flex; /* Ustawiamy flexbox na body */
-            justify-content: center; /* Wyśrodkowujemy horyzontalnie */
-            align-items: center; /* Wyśrodkowujemy wertykalnie */
-            min-height: 100vh; /* Ustawiamy minimalną wysokość na 100% viewportu */
-            margin: 0; /* Usuwamy domyślne marginesy */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
         .content {
-            text-align: center; /* Wyśrodkowujemy tekst wewnątrz kontenera */
+            text-align: center;
+            max-width: 800px; /* Ustawiamy maksymalną szerokość kontenera */
+            width: 90%; /* Zapewniamy responsywność na mniejszych ekranach */
+            margin: 0 auto; /* Wyśrodkowujemy kontener na stronie */
         }
         h1:hover, .avatar:hover {
             transform: scale(1.1);
@@ -33,7 +36,7 @@
             transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
         }
         .skill:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             background-color: red;
         }
     </style>
