@@ -84,17 +84,19 @@
             margin-top: 40px;
             text-align: center;
             box-shadow: 0 0 10px red;
-            width: 100%; /* Rozciągnięcie na całą szerokość strony */
+            width: 100%;
+            margin: 0; /* Usunięcie marginesów */
         }
         .quote-text {
-            font-size: 1.5rem;
+            font-size: 1.2rem; /* Zmniejszenie wielkości tekstu */
             color: white;
             margin-bottom: 20px;
             transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            white-space: nowrap; /* Tekst w jednej linii */
         }
         .quote-text:hover {
-            transform: scale(1.05); /* Powiększenie cytatu */
-            color: red; /* Zmiana koloru na czerwony */
+            transform: scale(1.05);
+            color: red;
         }
         .copyright {
             font-size: 1rem;
@@ -112,7 +114,7 @@
             transition: transform 0.3s ease-in-out;
         }
         .scroll-top:hover {
-            transform: scale(1.1); /* Powiększenie strzałki */
+            transform: scale(1.1);
         }
     </style>
 </head>
