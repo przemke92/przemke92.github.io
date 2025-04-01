@@ -145,6 +145,7 @@
             font-size: 1.2rem;
             font-weight: 700;
             position: relative;
+            padding-right: 20px; /* Dodane dla odległości od prawej krawędzi */
         }
 
         /* Stylizacja ikonki domku */
@@ -179,15 +180,16 @@
             left: 0;
         }
 
-        /* Czerwone podświetlenie dolnej krawędzi headera */
+        /* Delikatna czerwona poświata dolnej krawędzi headera */
         .header::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 5px;
+            height: 2px;
             background-color: red;
+            box-shadow: 0 0 5px red; /* Delikatna poświata */
             z-index: -1;
         }
     </style>
