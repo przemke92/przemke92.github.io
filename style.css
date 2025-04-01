@@ -1,6 +1,14 @@
-body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+.quote-section {
+    background-color: #222; /* Ciemniejszy odcień szarości */
+    padding: 40px 20px;
+    margin-top: 40px;
     text-align: center;
+    box-shadow: 0 0 10px red;
+    width: 100vw; /* Rozciągamy na całą szerokość ekranu */
+    position: relative; /* Pozwoli na pełne rozciąganie */
+    left: 50%; /* Przesuwamy o połowę szerokości ekranu */
+    right: 50%;
+    margin-left: -50vw; /* Przesuwamy w lewo o połowę szerokości ekranu */
+    margin-right: -50vw; /* Przesuwamy w prawo o połowę szerokości ekranu */
+    box-sizing: border-box; /* Zapewnia, że padding nie wpłynie na szerokość */
 }
