@@ -15,6 +15,7 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding-top: 50px; /* Dodajemy przestrzeń na sticky header */
         }
         .content {
             text-align: center;
@@ -121,9 +122,54 @@
         .scroll-top:hover {
             transform: scale(1.1);
         }
+
+        /* Sticky header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .header a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .header .home-icon {
+            width: 20px;
+            height: 20px;
+            background-image: url('https://img.icons8.com/ios-filled/50/ffffff/home.png');
+            background-size: cover;
+            background-position: center;
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body class="text-white">
+    <!-- Sticky Header -->
+    <div class="header">
+        <a href="https://przemke92.github.io">
+            <div class="home-icon"></div> 
+        </a>
+        <a href="https://przemke92.github.io">CONNECT</a>
+    </div>
+
     <div class="content">
         <img src="https://i.imgur.com/ptYLQ1L.png" alt="Avatar" class="avatar mx-auto mb-4 rounded-full border-4 border-red-500">
         <h1 class="text-3xl font-bold transition-text">Hi, I'm <span class="text-red-500">Przemek Iskra</span></h1>
