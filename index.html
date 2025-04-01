@@ -133,7 +133,7 @@
             color: white;
             padding: 15px 20px; /* Zwiększenie przestrzeni w pionie */
             display: flex;
-            justify-content: flex-start; /* Zmieniono na flex-start, by bardziej wyśrodkować CONNECT */
+            justify-content: flex-end; /* Zmiana z flex-start na flex-end */
             align-items: center;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
@@ -145,14 +145,14 @@
             font-size: 1.2rem;
             font-weight: 700;
             position: relative;
-            padding-right: 20px; /* Dodane dla odległości od prawej krawędzi */
+            padding-right: 40px; /* Zwiększamy przestrzeń na prawej stronie */
             display: inline-block;
         }
 
         /* Stylizacja ikonki domku */
         .header .home-icon {
-            width: 30px;
-            height: 30px;
+            width: 40px; /* Zwiększenie rozmiaru ikonki */
+            height: 40px;
             background-image: url('https://img.icons8.com/ios-filled/50/ffffff/home.png');
             background-size: cover;
             background-position: center;
@@ -160,7 +160,7 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        /* Powiększenie ikonki domku po najechaniu */
+        /* Efekt powiększania ikonki domku */
         .header .home-icon:hover {
             transform: scale(1.1);
         }
@@ -168,23 +168,7 @@
         /* Podkreślenie napisu CONNECT */
         .header a:hover {
             color: red;
-        }
-
-        .header a:hover::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background-color: red;
-            transition: width 0.3s, left 0.3s;
-            transform: translateX(-50%);
-        }
-
-        .header a:hover::after {
-            width: 100%;
-            left: 0;
+            text-decoration: none; /* Usuwamy podkreślenie */
         }
 
         /* Delikatna czerwona poświata dolnej krawędzi headera */
