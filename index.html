@@ -84,11 +84,17 @@
             margin-top: 40px;
             text-align: center;
             box-shadow: 0 0 10px red;
+            width: 100%; /* Rozciągnięcie na całą szerokość strony */
         }
         .quote-text {
             font-size: 1.5rem;
             color: white;
             margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .quote-text:hover {
+            transform: scale(1.05); /* Powiększenie cytatu */
+            color: red; /* Zmiana koloru na czerwony */
         }
         .copyright {
             font-size: 1rem;
@@ -103,6 +109,10 @@
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .scroll-top:hover {
+            transform: scale(1.1); /* Powiększenie strzałki */
         }
     </style>
 </head>
@@ -148,7 +158,7 @@
             </div>
         </div>
         <div class="quote-section">
-            <p class="quote-text">It's not just gathering requirements, it's engineering business success through strategic IT alignment.</p>
+            <p class="quote-text">IT'S NOT JUST GATHERING REQUIREMENTS, IT'S ENGINEERING BUSINESS SUCCESS THROUGH STRATEGIC IT ALIGNMENT.</p>
             <p class="copyright">&copy; 2025 | Przemysław Iskra</p>
         </div>
         <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
