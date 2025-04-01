@@ -45,16 +45,38 @@
             background: linear-gradient(to right, white, red);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-family: 'Film Fiction Sans Black', sans-serif; /* Użycie czcionki Film Fiction Sans Black */
+            font-family: 'Film Fiction Sans Black', sans-serif;
         }
         .transition-text:hover {
             transform: scale(1.1);
         }
         @font-face {
             font-family: 'Film Fiction Sans Black';
-            src: url('ścieżka/do/FilmFictionSans-Black.otf') format('opentype'); /* Zastąp ścieżką do pliku czcionki */
+            src: url('ścieżka/do/FilmFictionSans-Black.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
+        }
+        .story-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .story-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .story-item {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .story-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .story-item p {
+            font-size: 1rem;
+            color: gray;
         }
     </style>
 </head>
@@ -79,6 +101,25 @@
             <span class="px-4 py-2 rounded-lg skill">Data Integration</span>
             <span class="px-4 py-2 rounded-lg skill">ESB</span>
             <span class="px-4 py-2 rounded-lg skill">Communication Skills</span>
+        </div>
+        <div class="story-section">
+            <h2 class="story-title">My Story</h2>
+            <div class="story-item">
+                <h3>Integration Analyst at<br>Bunge</h3>
+                <p>January 2023 - Present</p>
+            </div>
+            <div class="story-item">
+                <h3>Data Operations Analyst at<br>Franklin Templeton</h3>
+                <p>April 2017 - December 2022</p>
+            </div>
+            <div class="story-item">
+                <h3>Tutor at<br>Tutlo</h3>
+                <p>March 2020 - December 2022</p>
+            </div>
+            <div class="story-item">
+                <h3>Collateral Analyst at<br>Franklin Templeton</h3>
+                <p>January 2016 - April 2017</p>
+            </div>
         </div>
     </div>
 </body>
