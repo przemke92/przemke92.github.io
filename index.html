@@ -85,14 +85,15 @@
             text-align: center;
             box-shadow: 0 0 10px red;
             width: 100%;
-            margin: 0; /* Usunięcie marginesów */
+            margin: 0;
+            box-sizing: border-box; /* Dodano box-sizing */
         }
         .quote-text {
-            font-size: 1.2rem; /* Zmniejszenie wielkości tekstu */
+            font-size: 1.2rem;
             color: white;
             margin-bottom: 20px;
             transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            white-space: nowrap; /* Tekst w jednej linii */
+            white-space: nowrap;
         }
         .quote-text:hover {
             transform: scale(1.05);
@@ -146,7 +147,7 @@
                 <h3>Integration Analyst at<br>Bunge</h3>
                 <p>January 2023 - Present</p>
             </div>
-            <div class="story-item">
+            <div class="story--item">
                 <h3>Data Operations Analyst at<br>Franklin Templeton</h3>
                 <p>April 2017 - December 2022</p>
             </div>
