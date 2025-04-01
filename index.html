@@ -7,15 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Houschka Pro Bold';
+            src: url('fonts/Houschka Pro Bold.woff') format('woff'); /* Ścieżka do czcionki z Twojego folderu GitHub */
+            font-weight: bold;
+            font-style: normal;
+        }
         body {
             background-color: black;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Houschka Pro Bold', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding-top: 200px; /* Jeszcze większy padding-top dla sekcji avatara */
+            padding-top: 200px;
         }
         .content {
             text-align: center;
