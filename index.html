@@ -56,13 +56,37 @@
             font-weight: normal;
             font-style: normal;
         }
+        .story-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .story-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .story-item {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+        .story-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .story-item p {
+            font-size: 1rem;
+            color: gray;
+        }
         .quote-section {
-            background-color: #222; /* Lekko ciemniejszy szary */
+            background-color: #333;
             padding: 40px 20px;
+            margin-top: 40px;
             text-align: center;
             box-shadow: 0 0 10px red;
             width: 100%;
-            box-sizing: border-box;
+            margin: 0;
+            box-sizing: border-box; /* Dodano box-sizing */
         }
         .quote-text {
             font-size: 1.2rem;
@@ -101,13 +125,47 @@
         <h1 class="text-3xl font-bold transition-text">Hi, I'm <span class="text-red-500">Przemek Iskra</span></h1>
         <p class="text-lg font-semibold mt-2">Integration Analyst at <strong class="text-red-500">Bunge</strong> | B.A. in Economics (PUEB, 2011-14)</p>
         <p class="mt-4 text-gray-400">Passionate about data analysis and visualization techniques. Always looking to upskill myself, in love with statistical and quantitative analysis, pursuing efficiency with a keen eye for detail.</p>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+            <span class="px-4 py-2 rounded-lg skill">SQL</span>
+            <span class="px-4 py-2 rounded-lg skill">AI-Powered Productivity</span>
+            <span class="px-4 py-2 rounded-lg skill">Database Configuration Setup</span>
+            <span class="px-4 py-2 rounded-lg skill">JIRA</span>
+            <span class="px-4 py-2 rounded-lg skill">ETL</span>
+            <span class="px-4 py-2 rounded-lg skill">Data Validation</span>
+            <span class="px-4 py-2 rounded-lg skill">QA</span>
+            <span class="px-4 py-2 rounded-lg skill">Automation</span>
+            <span class="px-4 py-2 rounded-lg skill">Proactive Monitoring</span>
+            <span class="px-4 py-2 rounded-lg skill">Agile</span>
+            <span class="px-4 py-2 rounded-lg skill">Scrum</span>
+            <span class="px-4 py-2 rounded-lg skill">Data Integration</span>
+            <span class="px-4 py-2 rounded-lg skill">ESB</span>
+            <span class="px-4 py-2 rounded-lg skill">Communication Skills</span>
+        </div>
+        <div class="story-section">
+            <h2 class="story-title">My Story</h2>
+            <div class="story-item">
+                <h3>Integration Analyst at<br>Bunge</h3>
+                <p>January 2023 - Present</p>
+            </div>
+            <div class="story--item">
+                <h3>Data Operations Analyst at<br>Franklin Templeton</h3>
+                <p>April 2017 - December 2022</p>
+            </div>
+            <div class="story-item">
+                <h3>Tutor at<br>Tutlo</h3>
+                <p>March 2020 - December 2022</p>
+            </div>
+            <div class="story-item">
+                <h3>Collateral Analyst at<br>Franklin Templeton</h3>
+                <p>January 2016 - April 2017</p>
+            </div>
+        </div>
         <div class="quote-section">
             <p class="quote-text">IT'S NOT JUST GATHERING REQUIREMENTS, IT'S ENGINEERING BUSINESS SUCCESS THROUGH STRATEGIC IT ALIGNMENT.</p>
             <p class="copyright">&copy; 2025 | Przemysław Iskra</p>
         </div>
         <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-            &#8593;
-        </div>
+            &#8593; </div>
     </div>
 </body>
 </html>
