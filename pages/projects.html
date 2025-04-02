@@ -19,10 +19,9 @@
             font-optical-sizing: auto;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
-            margin: 0; /* Remove default body margin */
+            min-height: 100vh;
+            margin: 0;
         }
-        /* Navbar Styling */
         .navbar {
             font-family: "Bebas Neue", sans-serif;
             background-color: black;
@@ -30,22 +29,18 @@
             padding: 15px 0;
             box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
         }
-        /* Navbar on Scroll */
         .navbar.scrolled {
             background-color: rgba(0, 0, 0, 0.5);
             box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-            backdrop-filter: blur(8px); /* Soft blur effect */
+            backdrop-filter: blur(8px);
         }
-        /* Brand Logo */
         .navbar-brand img {
             height: 40px;
             transition: transform 0.3s ease-in-out;
         }
-        /* Slight zoom effect on logo hover */
         .navbar-brand img:hover {
             transform: scale(1.1);
         }
-        /* Navbar Links */
         .navbar-nav .nav-link,
         .navbar-nav .nav-ex {
             color: white;
@@ -55,7 +50,6 @@
             transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
             position: relative;
         }
-        /* Hover Effect with Red Gradient */
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-ex:hover {
             background: linear-gradient(90deg, #ffffff, #ff4d4d);
@@ -63,7 +57,6 @@
             -webkit-text-fill-color: transparent;
             transform: scale(1.05);
         }
-        /* Underline Animation */
         .navbar-nav .nav-link::after,
         .navbar-nav .nav-ex::after {
             content: "";
@@ -76,13 +69,11 @@
             left: 50%;
             transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
         }
-        /* Expand underline on hover */
         .navbar-nav .nav-link:hover::after,
         .navbar-nav .nav-ex:hover::after {
             width: 100%;
             left: 0;
         }
-        /* Active Nav Link */
         .navbar-nav .nav-link.active,
         .navbar-nav .nav-ex.active {
             background: linear-gradient(90deg, #ffffff, #ff4d4d);
@@ -90,7 +81,6 @@
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
-        /* Mobile Menu Adjustments */
         @media (max-width: 768px) {
             .navbar-nav .nav-link,
             .navbar-nav .nav-ex {
@@ -99,17 +89,21 @@
                 font-size: 1.2rem;
             }
         }
-        /* Projects Section */
         .projects-section {
-            flex-grow: 1; /* Allow the section to take up remaining vertical space */
+            flex-grow: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
         .projects-content {
             font-size: 2rem;
+            margin-top: 20px; /* Add margin to separate image and text */
         }
-        /* Footer Styling */
+        .work-in-progress-image {
+            width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
         .footer {
             padding: 25px;
             text-align: center;
@@ -119,7 +113,6 @@
             position: relative;
             box-shadow: 0px -4px 10px rgba(255, 77, 77, 0.3);
         }
-        /* Footer Heading */
         .footer h2 {
             font-family: "Jersey 15", sans-serif;
             font-weight: 400;
@@ -129,12 +122,10 @@
             text-transform: uppercase;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
-        /* Hover Effect on Footer Heading */
         .footer h2:hover {
             color: #ff4d4d;
             transform: scale(1.1);
         }
-        /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -149,13 +140,11 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
         }
-        /* Hover Effect for Back to Top */
         .back-to-top:hover {
             transform: scale(1.1);
             box-shadow: 0px 6px 15px rgba(255, 77, 77, 0.7);
             background: linear-gradient(90deg, #d62828, #ff4d4d);
         }
-        /* Responsive Design */
         @media (max-width: 768px) {
             .footer h2 {
                 font-size: 1.5rem;
@@ -189,6 +178,7 @@
     </nav>
 
     <section class="projects-section">
+        <img src="../img/work-in-progress.png" alt="Work in Progress" class="work-in-progress-image">
         <div class="projects-content">
             Working on it...
         </div>
