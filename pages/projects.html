@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PI | Projects</title>
-    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <title>PI | Connect</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
-        body {
+       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+       body {
             background-color: black;
-            color: white;
-            text-align: center;
+            color           : white;
+            text-align      : center;
             font-family: "Winky Sans", sans-serif;
             font-optical-sizing: auto;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            margin: 0;
         }
+        /* Navbar Styling */
         .navbar {
-            font-family: "Bebas Neue", sans-serif;
-            background-color: black;
-            transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
+        font-family: "Bebas Neue", sans-serif;
+        background-color: black;
+        transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+        padding: 15px 0;
+        box-shadow: 0 4px 10px rgba(255, 0, 0, 0.2);
         }
+        /* Navbar on Scroll */
         .navbar.scrolled {
-            background-color: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-            backdrop-filter: blur(8px);
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+        backdrop-filter: blur(8px); /* Soft blur effect */
         }
+        /* Brand Logo */
         .navbar-brand img {
             height: 40px;
             transition: transform 0.3s ease-in-out;
         }
+        /* Slight zoom effect on logo hover */
         .navbar-brand img:hover {
             transform: scale(1.1);
         }
+        /* Navbar Links */
         .navbar-nav .nav-link,
         .navbar-nav .nav-ex {
             color: white;
@@ -50,6 +51,7 @@
             transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
             position: relative;
         }
+        /* Hover Effect with Red Gradient */
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-ex:hover {
             background: linear-gradient(90deg, #ffffff, #ff4d4d);
@@ -57,6 +59,7 @@
             -webkit-text-fill-color: transparent;
             transform: scale(1.05);
         }
+        /* Underline Animation */
         .navbar-nav .nav-link::after,
         .navbar-nav .nav-ex::after {
             content: "";
@@ -69,11 +72,13 @@
             left: 50%;
             transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
         }
+        /* Expand underline on hover */
         .navbar-nav .nav-link:hover::after,
         .navbar-nav .nav-ex:hover::after {
             width: 100%;
             left: 0;
         }
+        /* Active Nav Link */
         .navbar-nav .nav-link.active,
         .navbar-nav .nav-ex.active {
             background: linear-gradient(90deg, #ffffff, #ff4d4d);
@@ -81,6 +86,7 @@
             -webkit-text-fill-color: transparent;
             font-weight: bold;
         }
+        /* Mobile Menu Adjustments */
         @media (max-width: 768px) {
             .navbar-nav .nav-link,
             .navbar-nav .nav-ex {
@@ -89,21 +95,105 @@
                 font-size: 1.2rem;
             }
         }
-        .projects-section {
-            flex-grow: 1;
+        /* About Section */
+        .about-section {
+            background: #000; /* Pure black background */
+            color: white;
+            padding: 60px 20px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
-        .projects-content {
-            font-size: 2rem;
-            margin-top: 20px; /* Add margin to separate image and text */
+        /* Container */
+        .containerMaug {
+            max-width: 1080px;
+            padding: 10px;
         }
-        .work-in-progress-image {
-            width: 150px; /* Adjust size as needed */
-            height: auto;
+        .profile-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
         }
+        .centered-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Title */
+        .about-title {
+            font-family: "Poppins", sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #ff4d4d;
+            margin: 8px auto 0;
+            border-radius: 5px;
+        }
+        /* Paragraph Styling */
+        .about-text {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        /* Highlighted Text */
+        .highlight {
+            font-weight: 600;
+            color: #ff4d4d;
+        }
+        /* Social Icons */
+        .social-icons {
+            margin-top: 25px;
+        }
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 8px;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        .social-icon:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.7));
+        }
+        /* Fade-in Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-title {
+                font-size: 26px;
+            }
+            .about-text {
+                font-size: 15px;
+            }
+            .social-icon {
+                width: 42px;
+                height: 42px;
+            }
+        }
+        /* Footer Styling */
         .footer {
             padding: 25px;
             text-align: center;
@@ -113,6 +203,7 @@
             position: relative;
             box-shadow: 0px -4px 10px rgba(255, 77, 77, 0.3);
         }
+        /* Footer Heading */
         .footer h2 {
             font-family: "Jersey 15", sans-serif;
             font-weight: 400;
@@ -122,10 +213,12 @@
             text-transform: uppercase;
             transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
         }
+        /* Hover Effect on Footer Heading */
         .footer h2:hover {
             color: #ff4d4d;
             transform: scale(1.1);
         }
+        /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -140,11 +233,18 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
         }
+        /* Hover Effect for Back to Top */
         .back-to-top:hover {
             transform: scale(1.1);
             box-shadow: 0px 6px 15px rgba(255, 77, 77, 0.7);
             background: linear-gradient(90deg, #d62828, #ff4d4d);
         }
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Responsive Design */
         @media (max-width: 768px) {
             .footer h2 {
                 font-size: 1.5rem;
@@ -156,6 +256,7 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="../index.html">
@@ -167,7 +268,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="projects.html"><h2>Projects</h2></a>
+                        <a class="nav-link" href="projects.html"><h2>Projects</h2></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="connect.html"><h2>Connect</h2></a>
