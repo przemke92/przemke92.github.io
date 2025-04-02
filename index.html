@@ -13,126 +13,90 @@
             font-weight: bold;
             font-style: normal;
         }
-        body {
-            background-color: black;
-            font-family: 'Houschka Pro Bold', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding-top: 200px;
-        }
-        .content {
-            text-align: center;
-            max-width: 800px;
-            width: 90%;
-            margin: 0 auto;
-        }
-        h1:hover, .avatar:hover {
-            transform: scale(1.02);
-            transition: transform 0.3s ease-in-out;
-        }
-        .avatar {
-            width: 150px;
-            height: 150px;
-            transition: transform 0.3s ease-in-out;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
-        }
-        .skill {
-            background-color: gray;
-            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        }
-        .skill:hover {
-            transform: scale(1.02);
-            background-color: red;
-        }
-        .transition-text {
-            transition: transform 1s ease-in-out;
-            background: linear-gradient(to right, white, red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Film Fiction Sans Black', sans-serif;
-        }
-        .transition-text:hover {
-            transform: scale(1.1);
-        }
         @font-face {
             font-family: 'Film Fiction Sans Black';
             src: url('ścieżka/do/FilmFictionSans-Black.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
         }
-        .story-section {
-            margin-top: 100px;
-            text-align: center;
+        body {
+            background-color: black;
+            font-family: 'Houschka Pro Bold', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 100px;
         }
-        .story-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
+        .content {
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+            border-radius: 50%;
+        }
+        .avatar:hover, h1:hover {
+            transform: scale(1.05);
+        }
+        .skill {
+            background-color: gray;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 5px;
+        }
+        .skill:hover {
+            transform: scale(1.1);
+            background-color: red;
+        }
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        .home-icon {
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/QVWxMor.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .story-section {
+            margin-top: 50px;
         }
         .story-item {
-            display: inline-block;
-            margin: 20px;
-            text-align: center;
             background-color: #2a2a2a;
             padding: 20px;
             border-radius: 10px;
             width: 300px;
-            height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
             transition: transform 0.3s ease-in-out;
         }
         .story-item:hover {
-            transform: scale(1.1);
-        }
-        .story-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-        .story-item strong {
-            font-weight: bold;
-            background: linear-gradient(to right, white, red);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .story-item p {
-            font-size: 1rem;
-            color: gray;
+            transform: scale(1.05);
         }
         .quote-section {
             background-color: #222;
-            padding: 40px 20px;
-            margin-top: 40px;
+            padding: 40px;
             text-align: center;
             box-shadow: 0 0 10px red;
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            box-sizing: border-box;
-        }
-        .quote-text {
-            font-size: 1.2rem;
-            color: white;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-            white-space: nowrap;
-        }
-        .quote-text:hover {
-            transform: scale(1.05);
-            color: red;
-        }
-        .copyright {
-            font-size: 1rem;
-            color: gray;
+            margin-top: 50px;
+            width: 100%;
         }
         .scroll-top {
             position: fixed;
@@ -148,151 +112,44 @@
         .scroll-top:hover {
             transform: scale(1.1);
         }
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
-            padding: 19.5px 26px; /* Rozszerzenie o 30% (15px * 1.3 = 19.5px, 20px * 1.3 = 26px)*/
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-            position: relative;
-            display: inline-block;
-        }
-        .header .home-icon {
-            width: 50px;
-            height: 50px;
-            background-image: url('https://i.imgur.com/QVWxMor.png');
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .header .home-icon:hover {
-            transform: scale(1.1);
-        }
-        .header a:nth-child(2) {
-            margin-right: 20px;
-        }
-        .header a:nth-child(2):hover {
-            color: red;
-            text-decoration: none;
-        }
-        .header a:nth-child(2)::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: red;
-            transition: width 0.3s ease-in-out;
-        }
-        .header a:nth-child(2):hover::after {
-            width: 80%;
-        }
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: rgba(255, 0, 0, 0.3);
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            z-index: -1;
-        }
-        .timeline {
-            position: relative;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-            margin-top: 40px;
-        }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 50vw;
-            height: 2px;
-            background: linear-gradient(to right, white, red);
-            transform: translateY(-50%);
-        }
     </style>
 </head>
 <body class="text-white">
     <div class="header">
-        <a href="https://przemke92.github.io">
-            <div class="home-icon"></div>
-        </a>
+        <a href="https://przemke92.github.io" class="home-icon"></a>
         <a href="https://przemke92.github.io">CONNECT</a>
     </div>
 
     <div class="content">
-        <img src="https://i.imgur.com/ptYLQ1L.png" alt="Avatar" class="avatar mx-auto mb-4 rounded-full">
+        <img src="https://i.imgur.com/ptYLQ1L.png" alt="Avatar" class="avatar mx-auto mb-4">
         <h1 class="text-3xl font-bold transition-text">Hi, I'm <span class="text-red-500">Przemek Iskra</span></h1>
         <p class="text-lg font-semibold mt-2">Integration Analyst at <strong class="text-red-500">Bunge</strong> | B.A. in Economics (PUEB, 2011-14)</p>
-        <p class="mt-4 text-gray-400">Passionate about data analysis and visualization techniques. Always looking to upskill myself, in love with statistical and quantitative analysis, pursuing efficiency with a keen eye for detail.</p>
-        <div class="mt-6 flex flex-wrap justify-center gap-2">
-            <span class="px-4 py-2 rounded-lg skill">SQL</span>
-            <span class="px-4 py-2 rounded-lg skill">AI-Powered Productivity</span>
-            <span class="px-4 py-2 rounded-lg skill">Database Configuration Setup</span>
-            <span class="px-4 py-2 rounded-lg skill">JIRA</span>
-            <span class="px-4 py-2 rounded-lg skill">ETL</span>
-            <span class="px-4 py-2 rounded-lg skill">Data Validation</span>
-            <span class="px-4 py-2 rounded-lg skill">QA</span>
-            <span class="px-4 py-2 rounded-lg skill">Automation</span>
-            <span class="px-4 py-2 rounded-lg skill">Proactive Monitoring</span>
-            <span class="px-4 py-2 rounded-lg skill">Agile</span>
-            <span class="px-4 py-2 rounded-lg skill">Scrum</span>
-            <span class="px-4 py-2 rounded-lg skill">Data Integration</span>
-            <span class="px-4 py-2 rounded-lg skill">ESB</span>
-            <span class="px-4 py-2 rounded-lg skill">Communication Skills</span>
+        <div class="mt-6 flex flex-wrap justify-center">
+            <span class="skill">SQL</span>
+            <span class="skill">ETL</span>
+            <span class="skill">Data Validation</span>
+            <span class="skill">Automation</span>
+            <span class="skill">Scrum</span>
+            <span class="skill">Data Integration</span>
         </div>
+
         <div class="story-section">
-            <h2 class="story-title">My Story</h2>
-            <div class="timeline">
-                <a href="https://bunge.com/" target="_blank" class="story-item">
-                    <h3>Integration Analyst at</h3>
-                    <strong>Bunge</strong>
-                    <p>January 2023 - Present</p>
-                </a>
-                <a href="https://www.franklintempleton.com/" target="_blank" class="story-item">
-                    <h3>Data Ops Analyst at</h3>
-                    <strong>Franklin Templeton</strong>
-                    <p>April 2017 - December 2022</p>
-                </a>
-                <a href="https://tutlo.com/pl/" target="_blank" class="story-item">
-                    <h3>Tutor at</h3>
-                    <strong>Tutlo</strong>
-                    <p>March 2020 - December 2022</p>
-                </a>
-                <a href="https://www.franklintempleton.com/" target="_blank" class="story-item">
-                    <h3>Collateral Analyst at</h3>
-                    <strong>Franklin Templeton</strong>
-                    <p>January 2016 - April 2017</p>
-                </a>
+            <h2 class="text-2xl font-bold">My Story</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://bunge.com/" target="_blank" class="story-item">Integration Analyst at Bunge (2023 - Present)</a>
+                <a href="https://www.franklintempleton.com/" target="_blank" class="story-item">Data Ops Analyst at Franklin Templeton (2017 - 2022)</a>
+                <a href="https://tutlo.com/pl/" target="_blank" class="story-item">Tutor at Tutlo (2020 - 2022)</a>
             </div>
         </div>
+
         <div class="quote-section">
-            <p class="quote-text">IT'S NOT JUST GATHERING REQUIREMENTS, IT'S ENGINEERING BUSINESS SUCCESS THROUGH STRATEGIC IT ALIGNMENT.</p>
-            <p class="copyright">&copy; 2025 | Przemysław Iskra</p>
+            <p class="text-lg font-semibold">IT'S NOT JUST GATHERING REQUIREMENTS, IT'S ENGINEERING BUSINESS SUCCESS THROUGH STRATEGIC IT ALIGNMENT.</p>
+            <p class="text-gray-400">&copy; 2025 | Przemysław Iskra</p>
         </div>
-        <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
-            &#8593;
-        </div>
+    </div>
+
+    <div class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+        &#8593;
     </div>
 </body>
 </html>
